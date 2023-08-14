@@ -1,0 +1,9 @@
+.game {
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    border-bottom: 10px solid blue;
+}
+.game > * {
+    outline: 2px solid grey;
+}

@@ -74,7 +74,6 @@ export const GameForm = () => {
                 </div>
             </fieldset>
 
-            {/* TODO: create the rest of the input fields */}
 
             <button type="submit"
                 onClick={evt => {
@@ -89,7 +88,7 @@ export const GameForm = () => {
                         game_type: parseInt(currentGame.gameTypeId)
                     }
                     console.log(game.game_type)
-                    // Send POST request to your API
+                    // Send POST request to your API    
                     createGame(game)
                         .then(() => navigate("/games"))
                 }}

@@ -6,7 +6,8 @@ import { GameList } from "../components/game/GameList"
 import { EventList } from "../components/event/EventList"
 import { GameForm } from "../components/game/GameForm"
 import { EventForm } from "../components/event/EventForm"
-
+import { UpdateEvent } from "../components/event/UpdateEvent"
+import { EventDetails } from "../components/event/EventDetails"
 
 export const ApplicationViews = () => {
     return <>
@@ -18,6 +19,8 @@ export const ApplicationViews = () => {
                 <Route path="/events" element={<EventList />} />
                 <Route path="/games/new" element={<GameForm />} />
                 <Route path="/events/new" element={<EventForm />} />
+                <Route path="/event/:eventId/update" element={<UpdateEvent/>}/>
+                <Route path="/event/:eventId" element={<EventDetails/>}/>
             </Route>
         </Routes>
     </>

@@ -1,5 +1,5 @@
-export const getGames = () => {
-    return fetch("http://localhost:8000/games", {
+export const getGames = (id = '') => {
+    return fetch(`http://localhost:8000/games${id}`, {
         headers:{
             "Authorization": `Token ${localStorage.getItem("lu_token")}`
         }
@@ -25,4 +25,15 @@ export const getGameTypes = () => {
         }
      })
         .then(res => res.json())
+}
+
+export const updateGame = (game, gameId) => {
+    return fetch(`http://localhost:8000/games/${gameId}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Token ${localStorage.getItem("lu_token")}`
+        },
+        body: JSON.stringify(game)
+     })
 }
